@@ -18,9 +18,9 @@ public class UserService {
         return repository.save(user);
     }
 
-    public List<User> saveUser(List<User> cats){
-        return repository.saveAll(cats);
-    }
+//    public List<User> saveUser(List<User> user){
+//        return repository.saveAll(user);
+//    }
 
     public List<User> getUsers(){
         return repository.findAll();
@@ -30,13 +30,13 @@ public class UserService {
         return repository.findById(id).orElse(null);
     }
 
-   // public User getUserBuName(String name){
-        //return repository.findBy(name);
-    //}
+    public User getUserByName(String name){
+        return repository.findByName(name);
+    }
 
     public String deleteUser(int id){
         repository.deleteById(id);
-        return ":P Removed" +id;
+        return " Removed" +id;
     }
 
     public User updateUser(User user,int id){

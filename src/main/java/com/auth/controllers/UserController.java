@@ -22,7 +22,7 @@ public class UserController {
             return service.saveUser(user);
         }
 
-//        @PostMapping("/addCats")
+//        @PostMapping("/addUsers")
 //        public List<User> addUsers(@RequestBody List<User> user) {
 //            return service.saveUser(user);
 //        }
@@ -32,15 +32,15 @@ public class UserController {
             return service.getUsers();
         }
 
-        @GetMapping("/catById/{id}")
+        @GetMapping("/UserById/{id}")
         public User findUserById(@PathVariable int id) {
             return service.getUserById(id);
         }
 
-//        @GetMapping("/cat/{name}")
-//        public User findCatByName(@PathVariable String name) {
-//            return service.getCatBuName(name);
-//        }
+        @GetMapping("/user/{name}")
+        public User findUserByName(@PathVariable String name) {
+            return service.getUserByName(name);
+        }
 
         @PutMapping("/update/{id}")
         public User updateUser(@RequestBody User user,@PathVariable int id) {
