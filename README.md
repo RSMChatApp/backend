@@ -5,6 +5,7 @@
 
 
 2-open mySQL workbench and create root 
+
 ![](/rootcreation.png)
 
 
